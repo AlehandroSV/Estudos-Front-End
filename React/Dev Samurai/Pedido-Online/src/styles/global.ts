@@ -1,0 +1,43 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    @media (max-width: 1080px) {
+      font-size: 93.75%;
+    }
+
+    @media (max-width: 720px) {
+      font-size: 87.5%;
+    }
+  }
+
+  body {
+    background: ${({ theme }) => theme.colors.gray900};
+    -webkit-font-smoothing: antialiased;
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  border, input, select, button {
+    font: 400 1rem "Inter", Helvetica, Arial, sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  user-select, li {
+    list-style: none;
+  }
+`;
